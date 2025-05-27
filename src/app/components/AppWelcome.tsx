@@ -1,7 +1,7 @@
 'use client'
 // ถ้ามีการโต้ตอบกับ client ต้องใส่ 'use client' เปลี่ยนจาก server component -> client component
 
-import { useState } from "react";
+import { useState } from "react"; // update state
 
 type AppWelcomeProps = {
     headTitle?: string;
@@ -11,7 +11,7 @@ type AppWelcomeProps = {
 
 export default function AppWelcome({headTitle, isShow}: AppWelcomeProps){
     // เพิ่ม Property headTitle
-    const [title, setTitle] = useState('Welcome to COSCI')
+    const [title, setTitle] = useState('Welcome to COSCI') // update state
     // const title = 'Welcome to COSCI';
     const currentYear = <p>2025</p>;
 
