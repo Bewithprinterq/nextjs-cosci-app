@@ -5,7 +5,7 @@ export default function Home() {
     <div>
       <h1>Home Page</h1>
       <hr/>
-      <AppWelcome/>
+      <AppWelcome headTitle="SWU" isShow={true}/> {/* Props headTitle */}
     </div>
   );
 }

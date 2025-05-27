@@ -1,10 +1,16 @@
 'use client'
 // ถ้ามีการโต้ตอบกับ client ต้องใส่ 'use client' เปลี่ยนจาก server component -> client component
 
-export default function AppWelcome(){
+type AppWelcomeProps = {
+    headTitle?: string;
+    isShow: boolean;
+}
+// สร้างชนิดข้อมูล
+
+export default function AppWelcome({headTitle, isShow}: AppWelcomeProps){
+    // เพิ่ม Property headTitle
     const title = 'Welcome to COSCI';
     const currentYear = <p>2025</p>;
-    const isShow = true;
 
     // สร้าง function
     const handleClick = () => {
@@ -13,6 +19,7 @@ export default function AppWelcome(){
 
     return (
         <>
+            <h1>{headTitle}</h1>
             <p>{title.toUpperCase()}</p>
             {currentYear}
             <button className="bg-blue-300 p-3 m-3 text-blue-950 rounded-lg" onClick={handleClick}>กดได้เลย!</button>
