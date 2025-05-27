@@ -1,6 +1,8 @@
 'use client'
 // ถ้ามีการโต้ตอบกับ client ต้องใส่ 'use client' เปลี่ยนจาก server component -> client component
 
+import { useState } from "react";
+
 type AppWelcomeProps = {
     headTitle?: string;
     isShow: boolean;
@@ -9,12 +11,14 @@ type AppWelcomeProps = {
 
 export default function AppWelcome({headTitle, isShow}: AppWelcomeProps){
     // เพิ่ม Property headTitle
-    const title = 'Welcome to COSCI';
+    const [title, setTitle] = useState('Welcome to COSCI')
+    // const title = 'Welcome to COSCI';
     const currentYear = <p>2025</p>;
 
     // สร้าง function
     const handleClick = () => {
-        alert('Hello TypeScript');
+        setTitle('Welcome to SWU')
+        // alert('Hello TypeScript');
     }
 
     return (
