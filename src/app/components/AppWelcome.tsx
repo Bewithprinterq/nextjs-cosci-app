@@ -19,7 +19,7 @@ export default function AppWelcome({headTitle, isShow}: AppWelcomeProps){
     // สร้าง function
     const handleClick = () => {
         setTitle('Welcome to SWU')
-        // alert('Hello TypeScript');
+        alert('Hello TypeScript');
     }
 
     return (
@@ -29,7 +29,7 @@ export default function AppWelcome({headTitle, isShow}: AppWelcomeProps){
             <p>{title.toUpperCase()}</p>
             {currentYear}
             <Button className="p-3 m-3" onClick={handleClick}>Click Me</Button>
-            {/* <button className="bg-blue-300 p-3 m-3 text-blue-950 rounded-lg" onClick={handleClick}>กดได้เลย!</button> */}
+            <button className="bg-blue-300 p-3 m-3 text-blue-950 rounded-lg" onClick={handleClick}>กดได้เลย!</button> 
             {
                 isShow && <p>Date: 10/10/1998</p> 
                 // (If True) ถ้า isShow เป็น True จะแสดง Date 10/10/1998
