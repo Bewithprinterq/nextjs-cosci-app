@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Kanit } from "next/font/google";
-import "./globals.css";
-import Navbar01Page from "@/components/navbar-01/navbar-01";
-import Footer04Page from "@/components/footer-04/footer-04";
+import "../globals.css";
 
 const kanit = Kanit({
   subsets: ['thai'],
@@ -11,12 +9,12 @@ const kanit = Kanit({
 });
 
 export const metadata: Metadata = {
-  title: "ระบบขายสินค้า COSCI Shop",
+  title: "เข้าสู่ระบบ",
   description: "ขายสินค้าของนักศึกษา ประจำปี 2568",
 };
 
 // แต่ละ page จะเป็นลูกของ RootLayout
-export default function RootLayout({
+export default function AuthLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -26,9 +24,7 @@ export default function RootLayout({
       <body
         className={`${kanit.className}`}
       >
-        <Navbar01Page/>
         {children}
-        <Footer04Page/>
       </body>
     </html>
   );
