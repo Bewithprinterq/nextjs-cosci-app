@@ -1,47 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import Image from "next/image";
 
 type Features05PageProps = {
   courses: any[]
 }
-// const courses = [
-//   {
-//     icon: Goal,
-//     title: "Identify Opportunities",
-//     description:
-//       "Easily uncover untapped areas to explore and expand your reach effortlessly.",
-//   },
-//   {
-//     icon: BookCheck,
-//     title: "Build Authority",
-//     description:
-//       "Create valuable content that resonates, inspires trust, and positions you as an expert.",
-//   },
-//   {
-//     icon: ChartPie,
-//     title: "Instant Insights",
-//     description:
-//       "Gain immediate, actionable insights with a quick glance, enabling fast decision-making.",
-//   },
-//   {
-//     icon: Users,
-//     title: "Engage with Your Audience",
-//     description:
-//       "Boost audience engagement with interactive features like polls, quizzes, and forms.",
-//   },
-//   {
-//     icon: FolderSync,
-//     title: "Automate Your Workflow",
-//     description:
-//       "Streamline your processes by automating repetitive tasks, saving time and reducing effort.",
-//   },
-//   {
-//     icon: Zap,
-//     title: "Accelerate Growth",
-//     description:
-//       "Supercharge your growth by implementing strategies that drive results quickly and efficiently.",
-//   },
-// ];
 
 const Features05Page = ({courses}: Features05PageProps) => {
   return (
@@ -65,7 +28,15 @@ const Features05Page = ({courses}: Features05PageProps) => {
                 </p>
               </CardHeader>
               <CardContent className="mt-auto px-0 pb-0">
-                {course.picture}
+                <Image
+                  src={course.picture}
+                  alt={course.detail} 
+                  width={0} 
+                  height={0} 
+                  sizes="100vw"
+                  style={{width: '100%', height: 250}}
+                  priority
+                />
               </CardContent>
             </Card>
           ))}
