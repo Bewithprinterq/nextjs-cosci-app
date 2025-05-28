@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Kanit } from "next/font/google";
 import "./globals.css";
 import Navbar01Page from "@/components/navbar-01/navbar-01";
+import Footer04Page from "@/components/footer-04/footer-04";
 
 const kanit = Kanit({
   subsets: ['thai'],
@@ -27,6 +28,7 @@ export default function RootLayout({
       >
         <Navbar01Page/>
         {children}
+        <Footer04Page/>
       </body>
     </html>
   );
