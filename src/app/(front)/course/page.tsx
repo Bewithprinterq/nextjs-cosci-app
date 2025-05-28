@@ -1,0 +1,10 @@
+import Features05Page from "@/components/features-05/features-05";
+
+export default function Course() {
+    return (
+      <div>
+        <Features05Page/>
+      </div>
+    );
+  }
+  
